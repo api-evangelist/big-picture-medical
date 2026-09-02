@@ -64,5 +64,24 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Big Picture Medical is a company surfaced via the API Evangelist harvest backlog (source: openehr-coalition) and added to the network as a stub for full-pipeline profiling.
+Big Picture Medical Limited is a London-based health technology company building a semantic
+execution layer for healthcare — a low-code platform, founded by emergency physician Dr Tom
+McKinnon and developed over roughly a decade inside live NHS services, that harmonises clinical
+data from different systems into openEHR-coded concepts, holds it with visible lineage and
+provenance, and turns recommendations from algorithms, agents and clinicians into governed,
+auditable actions in the systems a trust already runs. The product is assembled from four
+component types the company calls Blocks — UX, Mapping, Data and Orchestration — sold as two
+solutions: Care Workflow (protocolised care pathways) and Data Workflow (an interoperability
+engine spanning openEHR, FHIR, HL7 and proprietary formats).
+
+**No public API contract.** Big Picture Medical's own G-Cloud 14 listing confirms the platform
+exposes REST APIs and that an API sandbox exists, but states the API documentation is supplied
+as a PDF to customers. No OpenAPI, AsyncAPI, GraphQL SDL, WSDL or .proto is published anywhere
+we could reach; there is no developer portal; `api.bigpicturemedical.com` resolves but refuses
+every connection; and `docs.bigpicturemedical.com` is a Google Workspace alias that demands a
+company account. See `x-coverage` in `apis.yml` for the exact wall and the probes behind it.
+
 - https://www.bigpicturemedical.com/
+- https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- https://github.com/big-picture-medical
+- https://trust.bigpicturemedical.com/

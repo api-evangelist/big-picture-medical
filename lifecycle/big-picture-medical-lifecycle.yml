@@ -1,0 +1,101 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: >-
+    No API versioning policy is published. The company documents software configuration
+    and change management at the organisational level (ISO 27001-aligned, reviewed
+    deployments, architectural review group) but says nothing about how the platform API
+    is versioned or how a breaking change reaches an integrator.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: no deprecation policy, no RFC 8594 Sunset/Deprecation header commitment found
+status_page: null
+status_page_note: >-
+  There is deliberately no public status page, and the company says so itself. G-Cloud
+  14, "Outage reporting": "Private alarm dashboards inside cloud provider console, alerts
+  delivered to engineering teams via corporate messaging system." status.bigpicturemedical.com
+  does not resolve (NXDOMAIN). Customers learn about incidents through the helpdesk and
+  major-incident email reports, not a public page. Recorded as a documented absence — NO
+  StatusPage pointer is emitted.
+sla:
+  url: https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/722391/544327769943197-service-definition-document-2024-05-02-0927.pdf
+  uptime_target: '99.6%'
+  uptime_target_conflict: >-
+    The two provider-published documents disagree. The G-Cloud 14 listing field
+    "Guaranteed availability" reads "Our system provides 99.6% availability." The
+    service-definition PDF attached to the same listing reads "Existing SLAs are 99.8%
+    uptime". Both are recorded; neither is chosen for the other.
+  uptime_target_alternate: '99.8%'
+  resilience: >-
+    "All production services utilise cloud-provider multi-AZ configuration, multiple
+    application containers with automated health detection and failover, and automated
+    backups." Hosting is AWS per the service-definition PDF; data storage and processing
+    location is the United Kingdom per the G-Cloud listing.
+support:
+  channels:
+  - email
+  - online ticketing / service desk
+  - Slack instant messaging (per the service-definition PDF)
+  phone_support: false
+  web_chat: false
+  onsite_support: true
+  response_times:
+  - priority: P1
+    definition: Production system down / total outage, or a production issue creating clinical risk
+    ack: 4 help desk hours
+    updates: every business day until resolved
+  - priority: P2
+    definition: Major feature or function failure blocking a key business operation
+    ack: 6 help desk hours
+    updates: every business day until resolved
+  - priority: P3
+    definition: Core business unaffected; efficiency of one or more users degraded
+    ack: 2 business days
+    updates: weekly
+  - priority: P4
+    definition: Little or no impact; minimal productivity loss, or an enhancement request
+    ack: 2 business days
+  - priority: P5
+    definition: Background or planned task, addressed when time permits or on the planned date
+    ack: none stated
+  tiers: >-
+    Four-tier model. Tier 1 is the customer's own IT team and Tier 2 the customer's
+    application support team; only Tier 3 (BPM Support) and Tier 4 (BPM Engineering) are
+    Big Picture Medical. Third-party support is available.
+  audit_access: "Users contact the support team to get audit information; user, supplier and
+    system audit data retained at least 12 months."
+change_log: null
+change_log_note: >-
+  No dated changelog, release-notes feed or blog is published. /blog and /news both 404 on
+  www.bigpicturemedical.com and no RSS/Atom feed is linked from any page. No ChangeLog
+  pointer is emitted.
+deprecated_operations: []
+maintenance:
+  windows: agreed per customer
+  constraints: >-
+    "Support is limited to none End of Life Operating Systems. The cover for hardware
+    configurations is determined per customer."
+end_of_contract:
+  data_extraction: >-
+    Data persisted by the HDF is held in openEHR. Conversion to another format on exit is
+    described as a core service function of the HDF; other platform data sits in a
+    conventional database exportable to CSV and JSON.
+  export_formats: [openEHR, FHIR, CSV, JSON, ODF]
+  process: >-
+    Notification, backup, secure transfer or deletion at the customer's election, account
+    closure and access revocation, final billing, then documented confirmation retained
+    for audit.
+evidence:
+- url: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+  status: 200
+- url: https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/722391/544327769943197-service-definition-document-2024-05-02-0927.pdf
+  status: 200
+- url: https://www.bigpicturemedical.com/status
+  status: 404
+- url: https://www.bigpicturemedical.com/blog
+  status: 404

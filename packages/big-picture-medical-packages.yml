@@ -1,0 +1,96 @@
+generated: '2026-09-02'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=bigpicturemedical
+note: >-
+  Big Picture Medical publishes four first-party packages under the npm scope
+  @bigpicturemedical. NONE of them is an API client library — they are internal
+  engineering tooling and the MedKit front-end design system (see
+  components/big-picture-medical-components.yml). No SDKs pointer is therefore
+  emitted: the company publishes no client library for its platform API. Every
+  registry below was queried unauthenticated on 2026-09-02.
+registries_probed:
+- registry: npm
+  result: 4 packages under scope @bigpicturemedical
+- registry: pypi
+  result: none (bigpicturemedical, big-picture-medical, bpm-platform all 404)
+- registry: rubygems
+  result: none
+- registry: crates.io
+  result: none
+- registry: packagist
+  result: none
+- registry: nuget
+  result: none (0 hits)
+- registry: maven-central
+  result: not probed — no JVM client library referenced in any provider material
+packages:
+- language: javascript
+  registry: npm
+  name: '@bigpicturemedical/eslint-config'
+  url: https://www.npmjs.com/package/@bigpicturemedical/eslint-config
+  install: npm install @bigpicturemedical/eslint-config
+  official: true
+  kind: engineering-tooling
+  description: Big Picture Medical ESLint config — "Style your code just like we do"
+  license: UNLICENSED
+  version: 0.6.0
+  published: '2024-02-06'
+  first_published: '2021-11-19'
+  release_count: 20
+  repository: https://github.com/big-picture-medical/bpm-ui
+  repository_status: 404 — the named GitHub repo is not public
+- language: javascript
+  registry: npm
+  name: '@bigpicturemedical/cast'
+  url: https://www.npmjs.com/package/@bigpicturemedical/cast
+  install: npm install @bigpicturemedical/cast
+  official: true
+  kind: engineering-tooling
+  description: Micro-generator (plop-based) for the MedKit Component Library
+  license: BSD-3-Clause
+  version: 2.1.1
+  published: '2021-12-01'
+  first_published: '2021-01-12'
+  release_count: 22
+  repository: null
+- language: javascript
+  registry: npm
+  name: '@bigpicturemedical/medkit-vue3'
+  url: https://www.npmjs.com/package/@bigpicturemedical/medkit-vue3
+  install: npm install @bigpicturemedical/medkit-vue3
+  official: true
+  kind: ui-components
+  description: MedKit component library for Vue 3
+  license: null
+  version: 0.0.1
+  published: '2021-12-01'
+  first_published: '2021-12-01'
+  release_count: 1
+  repository: null
+- language: javascript
+  registry: npm
+  name: '@bigpicturemedical/medkit-tokens'
+  url: https://www.npmjs.com/package/@bigpicturemedical/medkit-tokens
+  install: npm install @bigpicturemedical/medkit-tokens
+  official: true
+  kind: ui-components
+  description: MedKit design tokens and assets, built with style-dictionary
+  license: null
+  version: 0.7.0
+  published: '2021-05-10'
+  first_published: '2021-01-15'
+  release_count: 11
+  repository: https://github.com/big-picture-medical/medkit
+  repository_status: 404 — the named GitHub repo is not public
+currency_finding: >-
+  The whole @bigpicturemedical npm scope is dormant. The most recently published
+  package is the ESLint config at 2024-02-06; the MedKit component library and its
+  design tokens have not shipped a release since December 2021 and May 2021
+  respectively, and medkit-vue3 never left 0.0.1. Both GitHub repositories the
+  package metadata names (big-picture-medical/bpm-ui, big-picture-medical/medkit)
+  return 404 to an anonymous fetch, so a consumer cannot read the source either.
+sdk_finding: >-
+  No client library exists for the BPM Platform API in any registry probed. The
+  company's own G-Cloud 14 listing states the platform exposes REST APIs and that
+  API documentation is supplied as PDF; no generated or hand-written SDK
+  accompanies it.

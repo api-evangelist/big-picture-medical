@@ -1,0 +1,170 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+contract_evidence: none
+note: >-
+  IMPORTANT PROVENANCE CAVEAT. Every entry below is asserted from a document Big
+  Picture Medical itself authored and published (its G-Cloud 14 Digital Marketplace
+  listing, the service-definition PDF attached to it, and bigpicturemedical.com), NOT
+  from a machine-readable contract. The company publishes no OpenAPI, AsyncAPI, GraphQL
+  SDL, WSDL or .proto anywhere that could be checked, so none of these conformance
+  claims has been verified against a spec. The openEHR and FHIR entries in particular
+  are the company's own statements about its platform, not a contract signature.
+standards:
+- id: openehr
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: >-
+    G-Cloud 14 listing: "BPM Platform offers highly configurable and modular no-code
+    toolset to manage healthcare data based on OpenEHR specifications." The company
+    website's technology page describes Data Blocks, Mapping Blocks and archetype
+    registries; the public GitHub org big-picture-medical maintains a fork of
+    ehrbase/ehrbase (an open-source openEHR clinical data repository) and of
+    ppazos/cabolabs-ehrserver.
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+  - https://www.bigpicturemedical.com/technology/
+  - https://github.com/big-picture-medical/ehrbase-fork
+- id: hl7-fhir
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: >-
+    G-Cloud 14 listing, "Description of service interface": "Our systems expose service
+    interfaces to allow data interoperability and transformation through the use of REST
+    API's interoperable data standards including OpenEHR and FHIR and configurable
+    custom data connector services." Also, "Software add-on or extension": integrates
+    "using different healthcare standards (including OpenEHR/FHIR/HL7/Proprietary formats)".
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- id: hl7-v2
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: 'G-Cloud 14 listing names HL7 among the healthcare standards the connector model
+    supports (OpenEHR/FHIR/HL7/Proprietary formats).'
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- id: iso-27001
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: >-
+    G-Cloud 14: ISO/IEC 27001 certification Yes, accredited by UKAS, accreditation date
+    05/07/2022, scope "Provision of a SaaS-based intelligent pathway technology to
+    support collaborative healthcare delivery and clinical research within the
+    healthcare eco-system". The company homepage states ISO/IEC 27001:2022.
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+  - https://www.bigpicturemedical.com/
+- id: cyber-essentials
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: >-
+    G-Cloud 14: "Cyber essentials: Yes". NOTE A DISCREPANCY — the same G-Cloud 14 record
+    answers "Cyber essentials plus: No", while bigpicturemedical.com's homepage badge row
+    advertises both "Cyber Essentials" and "Cyber Essentials Plus (Independently
+    audited)". The G-Cloud answer dates from the May 2024 submission and the website
+    claim is current, so the two are not necessarily in conflict, but neither is
+    independently verifiable from a public certificate here. Recorded as claimed.
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+  - https://www.bigpicturemedical.com/
+- id: hipaa
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: 'G-Cloud 14, "Any other security certifications": "HIPAA Seal of Compliance".
+    The service-definition PDF is written throughout in HIPAA ePHI terms (Data Backup Plan,
+    Disaster Recovery Plan, Emergency Mode Operation Plan). Homepage badge: "HIPAA — US
+    privacy standard".'
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- id: gdpr
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: >-
+    Published privacy policy naming Big Picture Medical Limited (15th Floor, 6 Bevis Marks,
+    London EC3A 7BA) as data processor under GDPR and the Data Protection Act 2018, with a
+    DPO contact. Homepage badge "GDPR — EU and UK compliant".
+  evidence_urls:
+  - https://www.bigpicturemedical.com/privacy-policy/
+- id: wcag-2.1-aa
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: >-
+    G-Cloud 14, "Accessibility standards": "WCAG 2.1 AA or EN 301 549"; accessibility
+    testing performed with AXE and WAVE plus manual screen-reader and keyboard testing.
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- id: uk-g-cloud-14
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: 'Listed supplier on the UK Government Digital Marketplace, framework G-Cloud 14,
+    Lot 2 Cloud software, service ID 544327769943197, supplier BIG PICTURE MEDICAL LTD.'
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- id: nhs-n3-hscn
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: 'G-Cloud 14, "Connection to public sector networks": Yes — "NHS Network (N3)".'
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- id: tls-1.2-plus
+  conforms: true
+  claimed: true
+  verified_against_contract: false
+  evidence: >-
+    G-Cloud 14 records TLS (version 1.2 or above) both between buyer and supplier networks
+    and within the supplier network. Independently, our own probe of
+    www.bigpicturemedical.com negotiated TLSv1.3 (see
+    security/big-picture-medical-domain-security.yml).
+  evidence_urls:
+  - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- id: oauth2
+  conforms: false
+  claimed: false
+  evidence: 'No OAuth 2.0 surface published. /.well-known/oauth-authorization-server and
+    /.well-known/openid-configuration both 404 on www.bigpicturemedical.com.'
+- id: openid-connect
+  conforms: false
+  claimed: false
+  evidence: >-
+    No OIDC discovery document served. G-Cloud does record "Identity federation with
+    existing provider (for example Google Apps)" for MANAGEMENT access, which is a
+    workforce SSO statement, not a published API identity surface.
+- id: rfc9457-problem-details
+  conforms: false
+  claimed: false
+  evidence: no machine-readable contract published, so no error media type is observable
+- id: scim2
+  conforms: false
+  claimed: false
+- id: odata
+  conforms: false
+  claimed: false
+- id: fapi
+  conforms: false
+  claimed: false
+domain_standard:
+  market: healthcare / clinical data interoperability
+  candidate_standards:
+  - openehr
+  - hl7-fhir
+  - hl7-v2
+  declared_in_contract: false
+  finding: >-
+    REWARD WITHHELD, HONESTLY. Big Picture Medical's market has clear domain standards and
+    the company says plainly that it implements two of them (openEHR as the platform's data
+    model, FHIR on its interoperability surface). But domain_standard_conformance reads the
+    CONTRACT, and there is no contract: no openEHR archetype/template artefact, no FHIR
+    CapabilityStatement, no OpenAPI, nothing at a public URL. The signature that would earn
+    this — an openEHR ITS-REST path shape, an archetype identifier, a FHIR resource type —
+    could not be located because nothing machine-readable is served. This is the single
+    highest-value artifact the company could publish and is not publishing.

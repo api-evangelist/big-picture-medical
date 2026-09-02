@@ -1,0 +1,54 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+api_authentication_documented: false
+pointer_withheld: true
+pointer_withheld_reason: >-
+  NO Authentication pointer is emitted into apis.yml from this file, deliberately. The
+  ergonomics check that reads type: Authentication is asking whether an integrator can
+  learn how to authenticate against the API. Nothing below answers that. Everything here
+  is workforce and tenant access control that Big Picture Medical published in a
+  procurement questionnaire — no scheme, no header name, no token endpoint, no key
+  format, no scope model, no example request. Wiring the pointer would credit the company
+  with API auth documentation it has not published.
+summary:
+  types: []
+  api_key_in: []
+  oauth2_flows: []
+  note: derive-authentication.py found 0 security schemes — there is no OpenAPI in this repo
+schemes: []
+published_access_model:
+  api_access: >-
+    "Authenticated/Authorised users can register system/service to access the platform.
+    Authenticated/Authorised users can manage and execute workflows via platform APIs."
+    (G-Cloud 14, "What users can and can't do using the API")
+  api_documentation: 'Yes, per the same listing. Format: PDF. The PDF is not published;
+    it reaches customers through onboarding.'
+  api_sandbox: 'Yes — G-Cloud 14 answers "API sandbox or test environment: Yes". No public
+    sandbox URL, signup, or test credentials are published, so it is reachable only under
+    contract. Recorded here rather than in a sandbox/ artifact, because nothing about it
+    is usable by a reader.'
+  user_authentication: 2-factor authentication
+  management_access: >-
+    Role-based access control with unique credentials, multi-factor authentication,
+    environment access limited to VPNs, regular audits, encryption and secure protocols in
+    transit.
+  identity_federation: >-
+    "Identity federation with existing provider (for example Google Apps)" is offered for
+    MANAGEMENT access. This is workforce SSO, not an API identity surface, and no OIDC
+    discovery document is served (see well-known/big-picture-medical-well-known.yml).
+  audit: >-
+    Users obtain audit information by contacting the support team; user, supplier and
+    system audit data retained at least 12 months.
+discovery_probes:
+- url: https://www.bigpicturemedical.com/.well-known/openid-configuration
+  status: 404
+- url: https://www.bigpicturemedical.com/.well-known/oauth-authorization-server
+  status: 404
+- url: https://www.bigpicturemedical.com/.well-known/oauth-protected-resource
+  status: 404
+- url: https://api.bigpicturemedical.com/
+  status: <no response>
+- url: https://docs.bigpicturemedical.com/
+  status: 200 at https://www.google.com/a/bigpicturemedical.com/ServiceLogin — the docs
+    hostname is a Google Workspace Drive alias and demands a bigpicturemedical.com account

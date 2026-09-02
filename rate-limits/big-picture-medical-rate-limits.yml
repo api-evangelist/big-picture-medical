@@ -1,0 +1,26 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+limit_count: 0
+note: >-
+  Big Picture Medical documents no API rate limits anywhere a member of the public can
+  read. The company's own G-Cloud 14 listing confirms an API exists ("Authenticated /
+  Authorised users can register system/service to access the platform; Authenticated /
+  Authorised users can manage and execute workflows via platform APIs") and states that
+  the API documentation is supplied in PDF format to customers — that PDF is not
+  published. No quota, window, burst, response header (X-RateLimit-*, RateLimit-*,
+  Retry-After) or exhaustion status code could be found, and the API host itself
+  (api.bigpicturemedical.com) refuses every connection, so nothing could be observed on
+  the wire either. This is an honest zero, not an unchecked field.
+limits: []
+response_headers: []
+exhaustion_status: null
+evidence:
+- url: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+  status: 200
+  finding: "API: Yes. API documentation: Yes. API documentation formats: PDF. No limits stated."
+- url: https://api.bigpicturemedical.com/
+  status: <no response>
+  finding: connection timed out after 15s; ports 80/443/8080/8443 filtered
+- url: https://www.bigpicturemedical.com/developers
+  status: 404

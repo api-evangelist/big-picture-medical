@@ -1,0 +1,61 @@
+generated: '2026-09-02'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=bigpicturemedical
+note: >-
+  Big Picture Medical's own product language is built around client-side components — it
+  calls them "Blocks", and the UX Block is described as "the interaction with patients,
+  admins and clinicians like forms, graphs, image viewers, AI output and worklists". None
+  of that is distributed publicly. What IS public is MedKit, the company's front-end
+  design system, published to npm under the @bigpicturemedical scope. MedKit is not
+  documented anywhere and both GitHub repositories its package metadata names return 404
+  to an anonymous fetch, so this artifact records distribution only, not a usable
+  component reference.
+families:
+- family: MedKit
+  description: >-
+    Big Picture Medical's internal front-end design system — a Vue 3 component library plus
+    a style-dictionary token package and a plop-based micro-generator for scaffolding new
+    components.
+  status: dormant
+  loaders:
+  - name: '@bigpicturemedical/medkit-vue3'
+    registry: npm
+    url: https://www.npmjs.com/package/@bigpicturemedical/medkit-vue3
+    version: 0.0.1
+    published: '2021-12-01'
+    framework: Vue 3
+    note: a single 0.0.1 release; never versioned past initial publish
+  - name: '@bigpicturemedical/medkit-tokens'
+    registry: npm
+    url: https://www.npmjs.com/package/@bigpicturemedical/medkit-tokens
+    version: 0.7.0
+    published: '2021-05-10'
+    note: design tokens and assets generated with style-dictionary; 11 releases, none since May 2021
+  - name: '@bigpicturemedical/cast'
+    registry: npm
+    url: https://www.npmjs.com/package/@bigpicturemedical/cast
+    version: 2.1.1
+    published: '2021-12-01'
+    note: micro-generator for the MedKit Component Library; tooling, not a runtime component
+  documentation: null
+  source_repository: https://github.com/big-picture-medical/medkit
+  source_repository_status: 404 — not public
+- family: UX Blocks
+  description: >-
+    The productised component surface the company markets — forms, graphs, image viewers,
+    AI output panes and worklists that fill gaps in a patient, admin or clinician workflow
+    and write structured data straight into the data layer.
+  status: not publicly distributed
+  loaders: []
+  documentation: https://www.bigpicturemedical.com/technology/
+  note: >-
+    Described on the technology page and in the G-Cloud listing, but there is no public
+    package, embed snippet, loader script or component reference. Delivery is via the
+    company's configuration tooling to contracted customers.
+evidence:
+- url: https://www.bigpicturemedical.com/technology/
+  status: 200
+- url: https://www.npmjs.com/package/@bigpicturemedical/medkit-vue3
+  status: 200
+- url: https://github.com/big-picture-medical/medkit
+  status: 404

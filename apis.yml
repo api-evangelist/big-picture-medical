@@ -1,18 +1,54 @@
 aid: big-picture-medical
 name: Big Picture Medical
-description: 'Big Picture Medical is a company surfaced via the API Evangelist harvest backlog (source:
-  openehr-coalition) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Big Picture Medical Limited is a London-based health technology company building what it
+  calls a semantic execution layer for healthcare — a low-code platform, founded by
+  emergency physician Dr Tom McKinnon and developed over roughly a decade inside live NHS
+  services, that harmonises clinical data from different systems into openEHR-coded
+  concepts, holds it with visible lineage and provenance, and turns recommendations from
+  algorithms, agents and clinicians into governed, auditable actions in the systems a
+  trust already runs. The product is assembled from four component types the company calls
+  Blocks — UX, Mapping, Data and Orchestration — sold as two solutions: Care Workflow, for
+  protocolised care pathways such as single points of access, virtual wards and chronic
+  monitoring, and Data Workflow, a next-generation interoperability engine that connects
+  data silos across openEHR, FHIR, HL7 and proprietary formats. It is live in the NHS at
+  ICB level, integrates with EMIS and SystmOne, and connects to the NHS Network. Big
+  Picture Medical publishes no public API contract, developer portal or SDK; its own
+  G-Cloud 14 listing confirms a platform REST API exists and that its documentation is
+  supplied to customers as a PDF.
+image: https://www.bigpicturemedical.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/big-picture-medical/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:openehr-coalition
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-02'
 modified: '2026-09-02'
 tags:
 - Company
+- Healthcare
+- Health Care
+- Electronic Health Records
+- openEHR
+- FHIR
+- HL7
+- Interoperability
+- Clinical Data
+- Care Pathways
+- Workflow
+- Orchestration
+- No Code
+- NHS
+- United Kingdom
 apis: []
+x-apis-note: >-
+  No apis[] entry is registered. Big Picture Medical states in its own G-Cloud 14 listing
+  that the BPM Platform exposes REST APIs for authenticated users to register systems and
+  to manage and execute workflows, and that an API sandbox exists — but no public base URL
+  is named in any document the company publishes, and repair-api-bases.py returns verdict
+  "missing" for exactly that reason. api.bigpicturemedical.com has a public A record
+  (169.50.196.147, IBM Cloud) yet refuses connections on ports 80, 443, 8080 and 8443, so
+  it cannot be confirmed as the API host. Guessing a base URL from the domain is forbidden
+  by the enrichment contract, so the entry is left unregistered rather than fabricated.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -21,3 +57,111 @@ maintainers:
 common:
 - type: Website
   url: https://www.bigpicturemedical.com/
+- type: PrivacyPolicy
+  url: https://www.bigpicturemedical.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.bigpicturemedical.com/terms-of-service/
+- type: GitHubOrganization
+  url: https://github.com/big-picture-medical
+- type: Pricing
+  url: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+- type: Compliance
+  url: https://trust.bigpicturemedical.com/
+- type: TrustCenter
+  url: security/big-picture-medical-trust-center.yml
+- type: DomainSecurity
+  url: security/big-picture-medical-domain-security.yml
+- type: Conformance
+  url: conformance/big-picture-medical-conformance.yml
+- type: Lifecycle
+  url: lifecycle/big-picture-medical-lifecycle.yml
+- type: Plans
+  url: plans/big-picture-medical-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/big-picture-medical-rate-limits.yml
+- type: Packages
+  url: packages/big-picture-medical-packages.yml
+- type: Components
+  url: components/big-picture-medical-components.yml
+- type: LLMsTxt
+  url: llms/big-picture-medical-llms.txt
+x-pointer-liveness:
+  checked: '2026-09-02'
+  note: >-
+    Every external pointer above was fetched with a browser User-Agent on 2026-09-02 and
+    recorded below. trust.bigpicturemedical.com answers a Cloudflare bot interstitial
+    (403) rather than a page; the trust centre demonstrably exists — it is CNAMEd to
+    SafeBase's portal service and linked from the footer of every page on the company
+    website — so it is treated as live and turning away a crawler, not dead.
+  probes:
+  - url: https://www.bigpicturemedical.com/
+    status: 200
+  - url: https://www.bigpicturemedical.com/privacy-policy/
+    status: 200
+  - url: https://www.bigpicturemedical.com/terms-of-service/
+    status: 200
+  - url: https://github.com/big-picture-medical
+    status: 200
+  - url: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+    status: 200
+  - url: https://trust.bigpicturemedical.com/
+    status: 403
+    verdict: live — Cloudflare bot challenge, not a dead page
+x-artifacts-withheld:
+  note: >-
+    Artifact types deliberately NOT written, and why. Recorded so a later pass does not
+    re-litigate them.
+  a2a: >-
+    /.well-known/agent-card.json and /.well-known/agent.json were probed on every host and
+    all missed (404 on www, Cloudflare 403 on trust, no response on api). Per the contract
+    an agent card is search-only and a miss means write nothing.
+  openapi_asyncapi_graphql_grpc_wsdl: >-
+    Full STEP 0b contract discovery ran and found nothing. No spec exists to harvest, and
+    fabricating one is forbidden.
+  skills_overlays_errors_data_model_scopes_conventions_agentic_access: >-
+    All are derived from an OpenAPI. There is none, so there is nothing to derive from.
+  sandbox: >-
+    A sandbox exists per the G-Cloud listing but no URL, signup or test value is published.
+    The fact is recorded in authentication/big-picture-medical-authentication.yml instead
+    of a sandbox artifact that would contain nothing usable.
+  cli_changelog_blog_status_page_webhooks: >-
+    None published. /blog, /news, /status all 404; status.bigpicturemedical.com is
+    NXDOMAIN and the company states outage reporting is via private cloud-console
+    dashboards.
+  security_vulnerability_disclosure: >-
+    probe-security-programs.py returned vdp=none. No security.txt, no /security page, no
+    bug bounty program. No Security or VulnerabilityDisclosure pointer emitted.
+  well_known: >-
+    The probe index is written (well-known/big-picture-medical-well-known.yml) because a
+    recorded absence is data, but every path missed, so no WellKnown or SecurityTxt
+    pointer is emitted.
+  mcp: >-
+    The search record is written (mcp/big-picture-medical-mcp.yml) with deployment mode
+    none. No MCPServer pointer is emitted — the company markets an agentic layer but
+    operates no public MCP surface.
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 12
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Big Picture Medical's own G-Cloud 14 listing says the BPM Platform exposes REST APIs
+    and ships API documentation in PDF, but that PDF is only handed to contracted
+    customers — docs.bigpicturemedical.com is a Google Workspace Drive alias that redirects
+    to a bigpicturemedical.com account sign-in, and api.bigpicturemedical.com resolves to
+    an IBM Cloud address that refuses connections on 80, 443, 8080 and 8443.
+  evidence:
+  - url: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+    status: 200
+  - url: http://docs.bigpicturemedical.com/
+    status: 200
+  - url: https://api.bigpicturemedical.com/
+    status: 0
+  - url: https://www.bigpicturemedical.com/developers
+    status: 404
+  - url: https://www.bigpicturemedical.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-09-02'

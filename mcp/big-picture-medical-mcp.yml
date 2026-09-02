@@ -1,0 +1,38 @@
+generated: '2026-09-02'
+method: searched
+status: none
+source: >-
+  searched the company website, the public GitHub org big-picture-medical, the npm scope
+  @bigpicturemedical, and the G-Cloud 14 listing
+note: >-
+  No MCP server exists, and no candidate tool list could be derived either, because there
+  is no OpenAPI in this repo to derive one from. This file is the record of a search that
+  missed, not a stub for a server. NO MCPServer pointer is emitted from it — emitting one
+  would assert an agent surface the company does not operate. Worth stating plainly: Big
+  Picture Medical markets an "Agentic layer" on its technology page ("Agents can securely
+  look up and act on a patient's record across systems", "Context protocols") and sells
+  governed, auditable agent-initiated clinical actions as a headline capability. That
+  layer is entirely private. There is no public tool manifest, no hosted endpoint, and no
+  package.
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+server: null
+tools: []
+probes:
+- url: https://mcp.bigpicturemedical.com/
+  status: <not attempted — mcp.bigpicturemedical.com not probed; no such endpoint is
+    referenced in any provider material and guessing one is forbidden>
+- url: https://api.bigpicturemedical.com/
+  status: <no response>
+  note: DNS A record exists (169.50.196.147, IBM Cloud) but ports 80/443/8080/8443 are all filtered
+- url: https://github.com/big-picture-medical
+  status: 200
+  note: 8 public repos — 5 hiring tech tests and 3 forks (ehrbase, cabolabs-ehrserver, aws-google-auth). No MCP server.
+- url: https://registry.npmjs.org/-/v1/search?text=bigpicturemedical
+  status: 200
+  note: 4 packages in scope, none an MCP server

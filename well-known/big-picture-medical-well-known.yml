@@ -1,0 +1,115 @@
+generated: '2026-09-02'
+method: probed
+source: live GET of the named /.well-known/ path list on every host in apis.yml
+hit_count: 0
+note: >-
+  Nothing is served. www.bigpicturemedical.com is a WordPress site that answers 404
+  with a 61,781-byte themed "Page Not Found" shell for every /.well-known/ path,
+  including the negative control — so the 404s are genuine, not a catch-all masking a
+  hit. trust.bigpicturemedical.com is a SafeBase portal fronted by Cloudflare, which
+  answered an interstitial bot challenge (HTTP 403, "Just a moment...") to every
+  request including the negative control; nothing was retrievable there, so nothing is
+  recorded as served. api.bigpicturemedical.com has a public A record (169.50.196.147,
+  IBM Cloud) but every TCP connection to 80, 443, 8080 and 8443 timed out, so no
+  /.well-known/ probe could be issued against it at all. NO WellKnown and NO SecurityTxt
+  pointer is emitted from this file — it documents an absence, not a presence.
+path_echo_control: passed
+hosts:
+- host: https://www.bigpicturemedical.com
+  server: WordPress
+  soft_404_control:
+    path: /.well-known/big-picture-medical-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 61781
+    result: passed — control 404s, and every miss below returns the identical shell
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://trust.bigpicturemedical.com
+  server: SafeBase portal behind Cloudflare (CNAME bigpicturemedical.portals.safebase.io)
+  soft_404_control:
+    path: /.well-known/big-picture-medical-negative-control-7f3ab91c.json
+    status: 403
+    bytes: 6009
+    result: >-
+      inconclusive — the control also returns the Cloudflare challenge, so every 403
+      below is the WAF answering, not the origin. No document was retrieved from this
+      host and none is claimed.
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/ucp.json
+    status: 403
+    file: null
+  - path: /.well-known/acp.json
+    status: 403
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+- host: https://api.bigpicturemedical.com
+  server: unknown — DNS A 169.50.196.147 (IBM Cloud / SoftLayer), no port reachable
+  documents:
+  - path: /.well-known/security.txt
+    status: <no response>
+    file: null
+    note: connection timed out after 15s on both 80 and 443; ports 80/443/8080/8443 all filtered

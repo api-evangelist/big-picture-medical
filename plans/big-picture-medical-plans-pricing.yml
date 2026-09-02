@@ -1,0 +1,46 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+note: >-
+  Big Picture Medical publishes no pricing page on bigpicturemedical.com — /pricing
+  returns 404. The only price the company publishes anywhere is on its own UK
+  Government G-Cloud 14 Digital Marketplace listing for "BPM solutions", which states
+  a single indicative unit price. The pricing document attached to that listing then
+  declines to give a standard set of costs and routes buyers to sales, so the £75,000
+  figure is a framework ceiling rather than a rate card.
+plan_count: 1
+currency: GBP
+pricing_model: enterprise-negotiated
+free_trial: false
+plans:
+- name: BPM solutions (G-Cloud 14, Lot 2 Cloud software)
+  price: 75000
+  currency: GBP
+  billing_period: year
+  unit: unit
+  price_display: "£75,000 a unit a year"
+  included_quota: not stated
+  overage: not stated
+  educational_discount: false
+  free_trial: false
+  limits:
+    tenancy: single-tenant — "The platform is currently single-tenanted. As such, resources
+      are entirely environment-independent, ensuring no impact on other customers."
+    availability_sla: 99.6% (as stated in the G-Cloud listing)
+    data_location: United Kingdom
+  source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+sales_gate:
+  statement: >-
+    "The product has various configuration / procurement options which mean that it is
+    not appropriate, or possible to provide a standard set of costs. To get an estimate
+    of the costs for your particular requirements, please contact us at the email
+    address below: sales@bigpicturemedical.com"
+  source: https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/722391/544327769943197-pricing-document-2024-05-07-0943.pdf
+  contact: sales@bigpicturemedical.com
+evidence:
+- url: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/544327769943197
+  status: 200
+- url: https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/722391/544327769943197-pricing-document-2024-05-07-0943.pdf
+  status: 200
+- url: https://www.bigpicturemedical.com/pricing
+  status: 404

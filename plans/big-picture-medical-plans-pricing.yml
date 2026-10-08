@@ -44,3 +44,18 @@ evidence:
   status: 200
 - url: https://www.bigpicturemedical.com/pricing
   status: 404
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  units:
+  - credit
+  plans:
+  - name: BPM solutions (G-Cloud 14, Lot 2 Cloud software)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - credit
+    periods: []

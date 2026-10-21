@@ -15,3 +15,59 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: big-picture-medical-npm-registry
+  label: npm registry
+  partner: npm
+  partner_name: npm registry
+  category: official SDK (JavaScript/TypeScript)
+  type: register
+  channel: package-registry
+  evidence: https://www.npmjs.com/package/@bigpicturemedical/medkit-tokens
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@bigpicturemedical/medkit-tokens'
+      version: 0.7.0
+      released: '2026-01-28'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@bigpicturemedical/medkit-tokens
+      repo_leg: github-org:big-picture-medical
+      publisher_leg: org:bigpicturemedical
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
+- slug: big-picture-medical-uk-g-cloud-14-digital-marketplace
+  label: UK G-Cloud 14 (Digital Marketplace)
+  partner_name: UK G-Cloud 14 (Digital Marketplace)
+  category: UK public-sector procurement framework
+  type: marketplace
+  marketplace: g-cloud
+  channel: distribution
+  evidence: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/supplier/722391
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: UK G-Cloud 14 supplier list (Digital Marketplace)
+    spec_file: null
+    role: g-cloud-supplier
+    registered_name: BIG PICTURE MEDICAL LTD
+    register_id: '722391'
+    matched_domain: bigpicturemedical.com
+    matched_by: domain
+    domain_source: contact-email
+    signal_note: a framework award is distribution (selling to the public sector), not an integration; kept out
+      of position shares
+    detected_by: sweep-uk-g-cloud-suppliers.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
